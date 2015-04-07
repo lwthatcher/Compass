@@ -1,0 +1,43 @@
+{
+ "name":"root(Splits on: petallength[3.0])",
+ "children": [
+ {
+  "name":"greater(Splits on: petallength[4.9])",
+  "children": [
+   {
+   "name":"greater(Splits on: petalwidth[1.8])",
+   "children": [
+      {"name":"greater","size":28},
+     {
+    "name":"less(Splits on: sepallength[6.2])",
+    "children": [
+        {"name":"less","size":2},
+       {
+     "name":"greater(Splits on: sepallength[6.8])",
+     "children": [
+          {"name":"less","size":2},
+          {"name":"greater","size":1}
+     ]
+    }
+    ]
+   }
+   ]
+  },
+   {
+   "name":"less(Splits on: petalwidth[1.7])",
+   "children": [
+      {"name":"less","size":35},
+     {
+    "name":"greater(Splits on: sepallength[6.0])",
+    "children": [
+        {"name":"less","size":1},
+        {"name":"greater","size":1}
+    ]
+   }
+   ]
+  }
+  ]
+ },
+  {"name":"less","size":32}
+ ]
+}

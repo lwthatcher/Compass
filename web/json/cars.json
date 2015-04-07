@@ -1,0 +1,804 @@
+{
+ "name":"root(Splits on: safety)",
+ "children": [
+ {
+  "name":"high(Splits on: persons)",
+  "children": [
+   {
+   "name":"more(Splits on: buying)",
+   "children": [
+     {
+    "name":"high(Splits on: maint)",
+    "children": [
+       {
+     "name":"low(Splits on: doors)",
+     "children": [
+          {"name":"5more","size":3},
+         {
+      "name":"2(Splits on: lug_boot)",
+      "children": [
+            {"name":"small","size":1},
+            {"name":"med","size":1},
+            {"name":"big","size":1}
+      ]
+     },
+          {"name":"3","size":3},
+          {"name":"4","size":3}
+     ]
+    },
+        {"name":"vhigh","size":12},
+       {
+     "name":"med(Splits on: doors)",
+     "children": [
+          {"name":"5more","size":3},
+         {
+      "name":"2(Splits on: lug_boot)",
+      "children": [
+            {"name":"small","size":1},
+            {"name":"med","size":1},
+            {"name":"big","size":1}
+      ]
+     },
+          {"name":"3","size":3},
+          {"name":"4","size":3}
+     ]
+    },
+       {
+     "name":"high(Splits on: doors)",
+     "children": [
+          {"name":"5more","size":2},
+         {
+      "name":"2(Splits on: lug_boot)",
+      "children": [
+            {"name":"small","size":1},
+            {"name":"med","size":1},
+            {"name":"big","size":1}
+      ]
+     },
+          {"name":"3","size":3},
+          {"name":"4","size":3}
+     ]
+    }
+    ]
+   },
+     {
+    "name":"med(Splits on: maint)",
+    "children": [
+       {
+     "name":"low(Splits on: lug_boot)",
+     "children": [
+         {
+      "name":"small(Splits on: doors)",
+      "children": [
+            {"name":"5more","size":1},
+            {"name":"2","size":1},
+            {"name":"3","size":1},
+            {"name":"4","size":1}
+      ]
+     },
+          {"name":"med","size":3},
+          {"name":"big","size":4}
+     ]
+    },
+        {"name":"vhigh","size":9},
+       {
+     "name":"med(Splits on: lug_boot)",
+     "children": [
+         {
+      "name":"small(Splits on: doors)",
+      "children": [
+            {"name":"5more","size":1},
+            {"name":"2","size":1},
+            {"name":"3","size":1},
+            {"name":"4","size":1}
+      ]
+     },
+         {
+      "name":"med(Splits on: doors)",
+      "children": [
+            {"name":"5more","size":1},
+            {"name":"2","size":1},
+            {"name":"3","size":1},
+            {"name":"4","size":1}
+      ]
+     },
+          {"name":"big","size":4}
+     ]
+    },
+       {
+     "name":"high(Splits on: doors)",
+     "children": [
+          {"name":"5more","size":3},
+         {
+      "name":"2(Splits on: lug_boot)",
+      "children": [
+            {"name":"small","size":1},
+            {"name":"med","size":1},
+            {"name":"big","size":1}
+      ]
+     },
+          {"name":"3","size":2},
+          {"name":"4","size":3}
+     ]
+    }
+    ]
+   },
+     {
+    "name":"low(Splits on: maint)",
+    "children": [
+       {
+     "name":"low(Splits on: lug_boot)",
+     "children": [
+         {
+      "name":"small(Splits on: doors)",
+      "children": [
+            {"name":"5more","size":1},
+            {"name":"2","size":1},
+            {"name":"3","size":1},
+            {"name":"4","size":1}
+      ]
+     },
+         {
+      "name":"med(Splits on: doors)",
+      "children": [
+            {"name":"5more","size":1},
+            {"name":"2","size":1},
+            {"name":"3","size":1},
+            {"name":"4","size":1}
+      ]
+     },
+          {"name":"big","size":3}
+     ]
+    },
+        {"name":"vhigh","size":11},
+       {
+     "name":"med(Splits on: lug_boot)",
+     "children": [
+         {
+      "name":"small(Splits on: doors)",
+      "children": [
+            {"name":"2","size":1},
+            {"name":"3","size":1},
+            {"name":"4","size":1}
+      ]
+     },
+         {
+      "name":"med(Splits on: doors)",
+      "children": [
+            {"name":"5more","size":1},
+            {"name":"2","size":1},
+            {"name":"3","size":1},
+            {"name":"4","size":1}
+      ]
+     },
+          {"name":"big","size":4}
+     ]
+    },
+       {
+     "name":"high(Splits on: lug_boot)",
+     "children": [
+         {
+      "name":"small(Splits on: doors)",
+      "children": [
+            {"name":"5more","size":1},
+            {"name":"2","size":1},
+            {"name":"3","size":1},
+            {"name":"4","size":1}
+      ]
+     },
+         {
+      "name":"med(Splits on: doors)",
+      "children": [
+            {"name":"5more","size":1},
+            {"name":"2","size":1},
+            {"name":"3","size":1},
+            {"name":"4","size":1}
+      ]
+     },
+          {"name":"big","size":3}
+     ]
+    }
+    ]
+   },
+     {
+    "name":"vhigh(Splits on: maint)",
+    "children": [
+       {
+     "name":"low(Splits on: lug_boot)",
+     "children": [
+         {
+      "name":"small(Splits on: doors)",
+      "children": [
+            {"name":"5more","size":1},
+            {"name":"2","size":1}
+      ]
+     },
+          {"name":"med","size":3},
+          {"name":"big","size":4}
+     ]
+    },
+        {"name":"vhigh","size":11},
+       {
+     "name":"med(Splits on: doors)",
+     "children": [
+          {"name":"5more","size":3},
+         {
+      "name":"2(Splits on: lug_boot)",
+      "children": [
+            {"name":"small","size":1},
+            {"name":"med","size":1},
+            {"name":"big","size":1}
+      ]
+     },
+          {"name":"3","size":3},
+          {"name":"4","size":3}
+     ]
+    },
+        {"name":"high","size":10}
+    ]
+   }
+   ]
+  },
+   {
+   "name":"4(Splits on: buying)",
+   "children": [
+     {
+    "name":"high(Splits on: maint)",
+    "children": [
+        {"name":"low","size":12},
+        {"name":"vhigh","size":11},
+        {"name":"med","size":12},
+        {"name":"high","size":11}
+    ]
+   },
+     {
+    "name":"med(Splits on: maint)",
+    "children": [
+       {
+     "name":"low(Splits on: lug_boot)",
+     "children": [
+          {"name":"small","size":4},
+         {
+      "name":"med(Splits on: doors)",
+      "children": [
+            {"name":"5more","size":1},
+            {"name":"2","size":1},
+            {"name":"3","size":1},
+            {"name":"4","size":1}
+      ]
+     },
+          {"name":"big","size":4}
+     ]
+    },
+        {"name":"vhigh","size":9},
+       {
+     "name":"med(Splits on: lug_boot)",
+     "children": [
+          {"name":"small","size":4},
+         {
+      "name":"med(Splits on: doors)",
+      "children": [
+            {"name":"5more","size":1},
+            {"name":"2","size":1},
+            {"name":"3","size":1},
+            {"name":"4","size":1}
+      ]
+     },
+          {"name":"big","size":4}
+     ]
+    },
+        {"name":"high","size":12}
+    ]
+   },
+     {
+    "name":"low(Splits on: maint)",
+    "children": [
+       {
+     "name":"low(Splits on: lug_boot)",
+     "children": [
+          {"name":"small","size":4},
+         {
+      "name":"med(Splits on: doors)",
+      "children": [
+            {"name":"5more","size":1},
+            {"name":"2","size":1},
+            {"name":"3","size":1},
+            {"name":"4","size":1}
+      ]
+     },
+          {"name":"big","size":4}
+     ]
+    },
+        {"name":"vhigh","size":9},
+       {
+     "name":"med(Splits on: lug_boot)",
+     "children": [
+          {"name":"small","size":4},
+         {
+      "name":"med(Splits on: doors)",
+      "children": [
+            {"name":"5more","size":1},
+            {"name":"2","size":1},
+            {"name":"3","size":1},
+            {"name":"4","size":1}
+      ]
+     },
+          {"name":"big","size":3}
+     ]
+    },
+       {
+     "name":"high(Splits on: lug_boot)",
+     "children": [
+          {"name":"small","size":4},
+         {
+      "name":"med(Splits on: doors)",
+      "children": [
+            {"name":"5more","size":1},
+            {"name":"2","size":1},
+            {"name":"3","size":1},
+            {"name":"4","size":1}
+      ]
+     },
+          {"name":"big","size":4}
+     ]
+    }
+    ]
+   },
+     {
+    "name":"vhigh(Splits on: maint)",
+    "children": [
+        {"name":"low","size":8},
+        {"name":"vhigh","size":11},
+        {"name":"med","size":10},
+        {"name":"high","size":11}
+    ]
+   }
+   ]
+  },
+    {"name":"2","size":177}
+  ]
+ },
+  {"name":"low","size":518},
+ {
+  "name":"med(Splits on: persons)",
+  "children": [
+   {
+   "name":"more(Splits on: buying)",
+   "children": [
+     {
+    "name":"high(Splits on: lug_boot)",
+    "children": [
+        {"name":"small","size":11},
+       {
+     "name":"med(Splits on: maint)",
+     "children": [
+         {
+      "name":"low(Splits on: doors)",
+      "children": [
+            {"name":"5more","size":1},
+            {"name":"2","size":1},
+            {"name":"3","size":1},
+            {"name":"4","size":1}
+      ]
+     },
+          {"name":"vhigh","size":4},
+         {
+      "name":"med(Splits on: doors)",
+      "children": [
+            {"name":"5more","size":1},
+            {"name":"2","size":1},
+            {"name":"3","size":1},
+            {"name":"4","size":1}
+      ]
+     },
+         {
+      "name":"high(Splits on: doors)",
+      "children": [
+            {"name":"5more","size":1},
+            {"name":"2","size":1},
+            {"name":"3","size":1},
+            {"name":"4","size":1}
+      ]
+     }
+     ]
+    },
+       {
+     "name":"big(Splits on: maint)",
+     "children": [
+          {"name":"low","size":4},
+          {"name":"vhigh","size":4},
+          {"name":"med","size":4},
+          {"name":"high","size":4}
+     ]
+    }
+    ]
+   },
+     {
+    "name":"med(Splits on: maint)",
+    "children": [
+       {
+     "name":"low(Splits on: lug_boot)",
+     "children": [
+         {
+      "name":"small(Splits on: doors)",
+      "children": [
+            {"name":"5more","size":1},
+            {"name":"2","size":1},
+            {"name":"3","size":1}
+      ]
+     },
+         {
+      "name":"med(Splits on: doors)",
+      "children": [
+            {"name":"5more","size":1},
+            {"name":"2","size":1},
+            {"name":"3","size":1},
+            {"name":"4","size":1}
+      ]
+     },
+          {"name":"big","size":4}
+     ]
+    },
+       {
+     "name":"vhigh(Splits on: lug_boot)",
+     "children": [
+          {"name":"small","size":4},
+         {
+      "name":"med(Splits on: doors)",
+      "children": [
+            {"name":"5more","size":1},
+            {"name":"2","size":1},
+            {"name":"3","size":1},
+            {"name":"4","size":1}
+      ]
+     },
+          {"name":"big","size":4}
+     ]
+    },
+       {
+     "name":"med(Splits on: doors)",
+     "children": [
+          {"name":"5more","size":2},
+         {
+      "name":"2(Splits on: lug_boot)",
+      "children": [
+            {"name":"small","size":1},
+            {"name":"med","size":1},
+            {"name":"big","size":1}
+      ]
+     },
+          {"name":"3","size":2},
+          {"name":"4","size":2}
+     ]
+    },
+       {
+     "name":"high(Splits on: lug_boot)",
+     "children": [
+          {"name":"small","size":3},
+         {
+      "name":"med(Splits on: doors)",
+      "children": [
+            {"name":"5more","size":1},
+            {"name":"2","size":1},
+            {"name":"3","size":1}
+      ]
+     },
+          {"name":"big","size":3}
+     ]
+    }
+    ]
+   },
+     {
+    "name":"low(Splits on: maint)",
+    "children": [
+       {
+     "name":"low(Splits on: lug_boot)",
+     "children": [
+         {
+      "name":"small(Splits on: doors)",
+      "children": [
+            {"name":"5more","size":1},
+            {"name":"2","size":1},
+            {"name":"3","size":1}
+      ]
+     },
+         {
+      "name":"med(Splits on: doors)",
+      "children": [
+            {"name":"5more","size":1},
+            {"name":"2","size":1},
+            {"name":"3","size":1},
+            {"name":"4","size":1}
+      ]
+     },
+          {"name":"big","size":3}
+     ]
+    },
+       {
+     "name":"vhigh(Splits on: lug_boot)",
+     "children": [
+          {"name":"small","size":4},
+         {
+      "name":"med(Splits on: doors)",
+      "children": [
+            {"name":"5more","size":1},
+            {"name":"2","size":1}
+      ]
+     },
+          {"name":"big","size":4}
+     ]
+    },
+       {
+     "name":"med(Splits on: lug_boot)",
+     "children": [
+         {
+      "name":"small(Splits on: doors)",
+      "children": [
+            {"name":"5more","size":1},
+            {"name":"2","size":1},
+            {"name":"3","size":1},
+            {"name":"4","size":1}
+      ]
+     },
+         {
+      "name":"med(Splits on: doors)",
+      "children": [
+            {"name":"5more","size":1},
+            {"name":"2","size":1},
+            {"name":"3","size":1},
+            {"name":"4","size":1}
+      ]
+     },
+          {"name":"big","size":4}
+     ]
+    },
+       {
+     "name":"high(Splits on: doors)",
+     "children": [
+          {"name":"5more","size":3},
+         {
+      "name":"2(Splits on: lug_boot)",
+      "children": [
+            {"name":"small","size":1},
+            {"name":"med","size":1},
+            {"name":"big","size":1}
+      ]
+     },
+          {"name":"3","size":3},
+          {"name":"4","size":3}
+     ]
+    }
+    ]
+   },
+     {
+    "name":"vhigh(Splits on: maint)",
+    "children": [
+       {
+     "name":"low(Splits on: lug_boot)",
+     "children": [
+          {"name":"small","size":3},
+         {
+      "name":"med(Splits on: doors)",
+      "children": [
+            {"name":"5more","size":1},
+            {"name":"2","size":1},
+            {"name":"3","size":1},
+            {"name":"4","size":1}
+      ]
+     },
+          {"name":"big","size":4}
+     ]
+    },
+        {"name":"vhigh","size":10},
+       {
+     "name":"med(Splits on: lug_boot)",
+     "children": [
+          {"name":"small","size":4},
+         {
+      "name":"med(Splits on: doors)",
+      "children": [
+            {"name":"5more","size":1},
+            {"name":"2","size":1},
+            {"name":"3","size":1},
+            {"name":"4","size":1}
+      ]
+     },
+          {"name":"big","size":3}
+     ]
+    },
+        {"name":"high","size":12}
+    ]
+   }
+   ]
+  },
+   {
+   "name":"4(Splits on: buying)",
+   "children": [
+     {
+    "name":"high(Splits on: lug_boot)",
+    "children": [
+        {"name":"small","size":14},
+       {
+     "name":"med(Splits on: doors)",
+     "children": [
+         {
+      "name":"5more(Splits on: maint)",
+      "children": [
+            {"name":"vhigh","size":1},
+            {"name":"high","size":1}
+      ]
+     },
+          {"name":"2","size":4},
+          {"name":"3","size":3},
+         {
+      "name":"4(Splits on: maint)",
+      "children": [
+            {"name":"low","size":1},
+            {"name":"vhigh","size":1},
+            {"name":"med","size":1},
+            {"name":"high","size":1}
+      ]
+     }
+     ]
+    },
+       {
+     "name":"big(Splits on: maint)",
+     "children": [
+          {"name":"low","size":3},
+          {"name":"vhigh","size":4},
+          {"name":"med","size":4},
+          {"name":"high","size":4}
+     ]
+    }
+    ]
+   },
+     {
+    "name":"med(Splits on: maint)",
+    "children": [
+       {
+     "name":"low(Splits on: lug_boot)",
+     "children": [
+          {"name":"small","size":4},
+         {
+      "name":"med(Splits on: doors)",
+      "children": [
+            {"name":"5more","size":1},
+            {"name":"2","size":1},
+            {"name":"3","size":1},
+            {"name":"4","size":1}
+      ]
+     },
+          {"name":"big","size":3}
+     ]
+    },
+       {
+     "name":"vhigh(Splits on: lug_boot)",
+     "children": [
+          {"name":"small","size":4},
+         {
+      "name":"med(Splits on: doors)",
+      "children": [
+            {"name":"2","size":1},
+            {"name":"3","size":1},
+            {"name":"4","size":1}
+      ]
+     },
+          {"name":"big","size":4}
+     ]
+    },
+        {"name":"med","size":10},
+       {
+     "name":"high(Splits on: lug_boot)",
+     "children": [
+          {"name":"small","size":4},
+         {
+      "name":"med(Splits on: doors)",
+      "children": [
+            {"name":"5more","size":1},
+            {"name":"2","size":1},
+            {"name":"3","size":1},
+            {"name":"4","size":1}
+      ]
+     },
+          {"name":"big","size":4}
+     ]
+    }
+    ]
+   },
+     {
+    "name":"low(Splits on: maint)",
+    "children": [
+       {
+     "name":"low(Splits on: lug_boot)",
+     "children": [
+          {"name":"small","size":3},
+         {
+      "name":"med(Splits on: doors)",
+      "children": [
+            {"name":"5more","size":1},
+            {"name":"2","size":1},
+            {"name":"3","size":1}
+      ]
+     },
+          {"name":"big","size":4}
+     ]
+    },
+       {
+     "name":"vhigh(Splits on: lug_boot)",
+     "children": [
+          {"name":"small","size":4},
+         {
+      "name":"med(Splits on: doors)",
+      "children": [
+            {"name":"5more","size":1},
+            {"name":"2","size":1},
+            {"name":"3","size":1},
+            {"name":"4","size":1}
+      ]
+     },
+          {"name":"big","size":4}
+     ]
+    },
+       {
+     "name":"med(Splits on: lug_boot)",
+     "children": [
+          {"name":"small","size":4},
+         {
+      "name":"med(Splits on: doors)",
+      "children": [
+            {"name":"5more","size":1},
+            {"name":"2","size":1},
+            {"name":"3","size":1},
+            {"name":"4","size":1}
+      ]
+     },
+          {"name":"big","size":4}
+     ]
+    },
+        {"name":"high","size":8}
+    ]
+   },
+     {
+    "name":"vhigh(Splits on: maint)",
+    "children": [
+       {
+     "name":"low(Splits on: lug_boot)",
+     "children": [
+          {"name":"small","size":4},
+         {
+      "name":"med(Splits on: doors)",
+      "children": [
+            {"name":"5more","size":1},
+            {"name":"2","size":1},
+            {"name":"3","size":1}
+      ]
+     },
+          {"name":"big","size":4}
+     ]
+    },
+        {"name":"vhigh","size":10},
+       {
+     "name":"med(Splits on: lug_boot)",
+     "children": [
+          {"name":"small","size":3},
+         {
+      "name":"med(Splits on: doors)",
+      "children": [
+            {"name":"5more","size":1},
+            {"name":"2","size":1},
+            {"name":"3","size":1}
+      ]
+     },
+          {"name":"big","size":3}
+     ]
+    },
+        {"name":"high","size":9}
+    ]
+   }
+   ]
+  },
+    {"name":"2","size":171}
+  ]
+ }
+ ]
+}

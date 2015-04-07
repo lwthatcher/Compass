@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html data-ng-app="buttonApp">
+<head>
+    <title>Button List</title>
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <script src="../js/angular.js"></script>
+    <script>
+        var model = {
+            user: "Ken Rodham"
+        };
+
+        var buttonApp = angular.module("buttonApp", []);
+
+        buttonApp.run(function ($http) {
+            $http.get("../json/buttons.json").success(function (data) {
+                model.buttons = data;
+            });
+        });
+
+        buttonApp.controller("ButtonCtrl", function($scope) {
+            $scope.btn = model;
+
+            $scope.pass = function (button) {
+                return button.pass ? "btn-success" : "btn-danger";
+            }
+
+        });
+
+    </script>
+</head>
+<body ng-controller="ButtonCtrl">
+    <div class="page-header">
+        <h1>{{btn.user}}'s Giant List of Buttons:</h1>
+    </div>
+    <div class="panel">
+        <div ng-repeat="button in btn.buttons">
+            <button class="btn btn-lg" ng-class="pass(button)">{{button.button}}</button>
+        </div>
+    </div>
+</body>
+</html>

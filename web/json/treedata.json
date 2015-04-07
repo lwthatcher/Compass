@@ -1,0 +1,13 @@
+{
+    "name": "Top Level",
+    "children": [
+    {
+     "name": "Level 2: A",
+     "children": [
+      {"name": "Son of A","size": 234},
+      {"name": "Daughter of A", "size": 234}
+     ]
+    },
+    {"name": "Level 2: B","size": 332}
+    ]
+}

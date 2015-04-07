@@ -1,0 +1,137 @@
+{
+ "name":"root(Splits on: 'p-f-f')",
+ "children": [
+ {
+  "name":"'?'(Splits on: 'mx-m')",
+  "children": [
+    {"name":"'yes'","size":4},
+    {"name":"'no'","size":4},
+    {"name":"'?'","size":2}
+  ]
+ },
+ {
+  "name":"'yes'(Splits on: 's-c-c')",
+  "children": [
+   {
+   "name":"'no'(Splits on: 'd-f-e')",
+   "children": [
+     {
+    "name":"'yes'(Splits on: 'imm')",
+    "children": [
+       {
+     "name":"'no'(Splits on: 'e-a-a-s-a')",
+     "children": [
+         {
+      "name":"'?'(Splits on: 'w-p-c-s')",
+      "children": [
+            {"name":"'no'","size":1},
+            {"name":"'yes'","size":1}
+      ]
+     },
+          {"name":"'no'","size":1},
+          {"name":"'yes'","size":1}
+     ]
+    },
+        {"name":"'yes'","size":8}
+    ]
+   },
+     {
+    "name":"'no'(Splits on: 'e-a-a-s-a')",
+    "children": [
+       {
+     "name":"'?'(Splits on: 'a-o-t-b-r')",
+     "children": [
+         {
+      "name":"'yes'(Splits on: 'h-i')",
+      "children": [
+            {"name":"'yes'","size":1},
+            {"name":"'no'","size":1}
+      ]
+     },
+          {"name":"'no'","size":10}
+     ]
+    },
+        {"name":"'no'","size":37},
+        {"name":"'yes'","size":62}
+    ]
+   },
+      {"name":"'?'","size":7}
+   ]
+  },
+   {
+   "name":"'yes'(Splits on: 'e-a-a-s-a')",
+   "children": [
+     {
+    "name":"'?'(Splits on: 'w-p-c-s')",
+    "children": [
+        {"name":"'no'","size":1},
+        {"name":"'yes'","size":3}
+    ]
+   },
+     {
+    "name":"'no'(Splits on: 'a-o-t-b-r')",
+    "children": [
+        {"name":"'yes'","size":2},
+       {
+     "name":"'no'(Splits on: 's-r-t-s')",
+     "children": [
+         {
+      "name":"'yes'(Splits on: 'w-p-c-s')",
+      "children": [
+           {
+       "name":"'no'(Splits on: 'h-i')",
+       "children": [
+              {"name":"'yes'","size":1},
+              {"name":"'no'","size":1}
+       ]
+      },
+            {"name":"'yes'","size":4}
+      ]
+     },
+          {"name":"'no'","size":1}
+     ]
+    },
+        {"name":"'?'","size":1}
+    ]
+   },
+     {
+    "name":"'yes'(Splits on: 'a-o-t-b-r')",
+    "children": [
+       {
+     "name":"'yes'(Splits on: 'a-s-t-b')",
+     "children": [
+          {"name":"'no'","size":2},
+          {"name":"'yes'","size":3}
+     ]
+    },
+        {"name":"'no'","size":9}
+    ]
+   }
+   ]
+  },
+    {"name":"'?'","size":6}
+  ]
+ },
+ {
+  "name":"'no'(Splits on: 'a-o-t-b-r')",
+  "children": [
+    {"name":"'yes'","size":194},
+   {
+   "name":"'no'(Splits on: 'r-g-i-s')",
+   "children": [
+      {"name":"'yes'","size":14},
+     {
+    "name":"'no'(Splits on: 'd-f-e')",
+    "children": [
+        {"name":"'yes'","size":5},
+        {"name":"'no'","size":1}
+    ]
+   },
+      {"name":"'?'","size":1}
+   ]
+  },
+    {"name":"'?'","size":3}
+  ]
+ }
+ ]
+}

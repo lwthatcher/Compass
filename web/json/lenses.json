@@ -1,0 +1,39 @@
+{
+ "name":"root(Splits on: tear-prod-rate)",
+ "children": [
+  {"name":"reduced","size":10},
+ {
+  "name":"normal(Splits on: astigmatism)",
+  "children": [
+   {
+   "name":"no(Splits on: age)",
+   "children": [
+      {"name":"pre-presbyopic","size":2},
+      {"name":"young","size":2},
+     {
+    "name":"presbyopic(Splits on: spectacle-prescrip)",
+    "children": [
+        {"name":"myope","size":1},
+        {"name":"hypermetrope","size":1}
+    ]
+   }
+   ]
+  },
+   {
+   "name":"yes(Splits on: spectacle-prescrip)",
+   "children": [
+      {"name":"myope","size":3},
+     {
+    "name":"hypermetrope(Splits on: age)",
+    "children": [
+        {"name":"young","size":1},
+        {"name":"pre-presbyopic","size":1},
+        {"name":"presbyopic","size":1}
+    ]
+   }
+   ]
+  }
+  ]
+ }
+ ]
+}

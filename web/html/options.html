@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html data-ng-app="optionsApp">
+<head>
+    <title>Options List</title>
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <script src="../js/angular.js"></script>
+    <script>
+        var model = {
+            user: "Ken Rodham"
+        };
+
+        var optionsApp = angular.module("optionsApp", []);
+
+        optionsApp.run(function ($http) {
+            $http.get("../json/animals.json").success(function (data) {
+                model.animals = data;
+            });
+
+            $http.get("../json/ids.json").success(function (data) {
+                model.ids = data;
+            });
+
+            $http.get("../json/names.json").success(function (data) {
+                model.names = data;
+            });
+        });
+
+        optionsApp.controller("ButtonCtrl", function($scope) {
+            $scope.btn = model;
+
+        });
+
+    </script>
+</head>
+<body ng-controller="ButtonCtrl">
+<div class="page-header">
+    <h1>{{btn.user}}'s Giant List of Options:</h1>
+</div>
+    <table>
+        <thead>
+            <tr>
+                <td colspan="2"><h3>Pets:</h3></td>
+                <td><h3>ID Numbers:</h3></td>
+                <td><h3>ID Names:</h3></td>
+            </tr>
+            <tr>
+                <td colspan="2" width="260">
+                    <select id="s1" ng-model="selectedItem" ng-options="animal as animal.name for animal in btn.animals track by animal.id" ></select>
+                </td>
+                <td width="260">
+                    <select id="s2" ng-model="selectedID" ng-options="id.name for id in btn.ids track by id.id" ></select>
+                </td>
+                <td>
+                    <select id="s3" ng-model="selectedName" ng-options="name.first for name in btn.names | orderBy:['first','last']" ></select>
+                </td>
+            </tr>
+        <tbody>
+            <tr>
+                <td>
+                    <b>Price:</b>
+                    <label>{{selectedItem.price | currency}}</label>
+                </td>
+                <td>
+                    <b>Exists:</b>
+                    <label>{{selectedItem.exists}}</label>
+                </td>
+                <td>
+                    <b>ID:</b>
+                    <label>{{selectedID.name}}</label>
+                </td>
+                <td>
+                    <b>Full Name:</b>
+                    <label>{{selectedName.first}} {{selectedName.last}}</label>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
