@@ -3,7 +3,7 @@ package d3;
 import org.openqa.selenium.By;
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.SvgRemoteWebElement;
+import org.openqa.selenium.remote.D3Element;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -48,7 +48,7 @@ public class ByShape extends By
     public WebElement findElement(SearchContext context)
     {
         WebElement e = context.findElement(getSelector());
-        return new SvgRemoteWebElement(e);
+        return new D3Element(e);
     }
 
     @Override
@@ -58,7 +58,7 @@ public class ByShape extends By
         List<WebElement> result = new ArrayList<WebElement>();
         for (WebElement element : elements)
         {
-            result.add(new SvgRemoteWebElement(element));
+            result.add(new D3Element(element));
         }
         return result;
     }

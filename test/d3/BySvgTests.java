@@ -5,7 +5,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.SvgRemoteWebElement;
+import org.openqa.selenium.remote.D3Element;
 import other.SupportedDriver;
 
 import java.util.List;
@@ -30,7 +30,7 @@ public class BySvgTests
         driver.get(SCATTERPLOT_URL);
 
         WebElement svg = driver.findElement(ByD3.svg());
-        assert svg instanceof SvgRemoteWebElement;
+        assert svg instanceof D3Element;
     }
 
     @Test
@@ -39,8 +39,8 @@ public class BySvgTests
         driver = SupportedDriver.Chrome.getDriver();
         driver.get(SCATTERPLOT_URL);
 
-        SvgRemoteWebElement svg = (SvgRemoteWebElement)driver.findElement(ByD3.svg());
-        SvgRemoteWebElement circle = svg.findElement(By.cssSelector(BIGGEST_CIRCLE_SELECTOR));
+        D3Element svg = (D3Element)driver.findElement(ByD3.svg());
+        D3Element circle = svg.findElement(By.cssSelector(BIGGEST_CIRCLE_SELECTOR));
 
         WebElement p = driver.findElement(By.tagName("p"));
         assert p.getText().equals("nothing selected yet");
