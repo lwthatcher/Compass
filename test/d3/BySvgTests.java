@@ -1,5 +1,7 @@
 package d3;
 
+import d3.by.ByD3;
+import d3.by.shape.D3Shape;
 import org.junit.After;
 import org.junit.Test;
 import org.openqa.selenium.By;

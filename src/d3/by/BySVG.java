@@ -1,5 +1,7 @@
-package d3;
+package d3.by;
 
+import d3.by.shape.ByShape;
+import d3.by.shape.D3Shape;
 import org.openqa.selenium.By;
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;

@@ -1,6 +1,6 @@
 package exceptions;
 
-import d3.D3Shape;
+import d3.by.shape.D3Shape;
 import org.openqa.selenium.WebDriverException;
 
 /**

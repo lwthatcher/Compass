@@ -1,4 +1,4 @@
-package d3;
+package d3.by.shape;
 
 import exceptions.UnrecognizedShapeException;
 

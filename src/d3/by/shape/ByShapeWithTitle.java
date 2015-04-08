@@ -1,12 +1,12 @@
-package d3;
+package d3.by.shape;
 
+import d3.by.shape.ByShape;
 import org.openqa.selenium.By;
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.NoSuchElementException;
 
 /**
  * @author Lawrence Thatcher

@@ -1,6 +1,6 @@
 package org.openqa.selenium.remote;
 
-import d3.ByNeighborNode;
+import d3.by.ByNeighborNode;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.internal.Coordinates;
 
