@@ -5,12 +5,15 @@ import d3.by.shape.D3Shape;
 import org.junit.After;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.D3Element;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import other.SupportedDriver;
 
 import java.util.List;
+
+import static d3.LesMiserablesCharacters.*;
 
 /**
  * Created by lthatch1 on 4/1/2015.
@@ -24,10 +27,6 @@ public class ByNeighborNodeTests
 
     private WebDriver driver;
 
-    private static final String JEAN_VALJEAN = "Valjean";
-    private static final String JONDRETTE = "Jondrette";
-    private static final String JONDRETTE_NEIGHBOR = "Mme.Burgon";
-
     @Test
     public void test_GetNeighbors_curves()
     {
@@ -39,7 +38,23 @@ public class ByNeighborNodeTests
         List<D3Element> neighbors = circle.getNeighborNodes();
         assert neighbors.size() == 1;
         assert neighbors.get(0).getText().equals(JONDRETTE_NEIGHBOR);
+    }
 
+    @Test
+    public void test_GetManyNeighbors_curves()
+    {
+        driver = SupportedDriver.Chrome.getDriver();
+        driver.get(CURVED_LINKS_URL);
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+
+        D3Element circle = (D3Element) wait.until(ExpectedConditions.presenceOfElementLocated(ByD3.svg().shape(D3Shape.Circle).withTitle(MYRIEL)));
+        List<D3Element> neighbors = circle.getNeighborNodes();
+        for (WebElement neighbor : neighbors)
+        {
+            System.out.println(neighbor.getText());
+            assert MyrielNeighbors().contains(neighbor.getText());
+        }
+        assert neighbors.size() == 10;
     }
 
     @Test
