@@ -26,13 +26,13 @@ public class ByShape extends By
         setSearchFor(D3Shape.values());
     }
 
-    protected ByShape(String prepend)
+    public ByShape(String prepend)
     {
         this.prepend = prepend;
         setSearchFor(D3Shape.values());
     }
 
-    protected ByShape(String prepend, D3Shape... shapes)
+    public ByShape(String prepend, D3Shape... shapes)
     {
         this.prepend = prepend;
         setSearchFor(shapes);
