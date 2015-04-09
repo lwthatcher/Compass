@@ -11,5 +11,10 @@ public class ByD3
         return new BySVG();
     }
 
+    public static ByPath path()
+    {
+        return new ByPath();
+    }
+
 
 }
