@@ -118,6 +118,44 @@ public class BySvgTests
         assert marius.getText().equals("Marius");
     }
 
+    @Test
+    public void test_getCircle_byAttribute_singleShape()
+    {
+        driver = SupportedDriver.Chrome.getDriver();
+        driver.get(SCATTERPLOT_URL);
+
+        D3Element circle = (D3Element)driver.findElement(ByD3.svg().shape("circle").withAttribute("r","5"));
+        assert circle.getAttribute("cx").equals("460");
+        assert circle.getAttribute("cy").equals("20");
+
+        WebElement p = driver.findElement(By.tagName("p"));
+        assert p.getText().equals("nothing selected yet");
+
+        circle.click();
+        p = driver.findElement(By.tagName("p"));
+        String text = p.getText();
+        assert text.equals("600,150");
+    }
+
+    @Test
+    public void test_getCircle_byAttribute_anyShape()
+    {
+        driver = SupportedDriver.Chrome.getDriver();
+        driver.get(SCATTERPLOT_URL);
+
+        D3Element circle = (D3Element)driver.findElement(ByD3.svg().shape().withAttribute("r","5"));
+        assert circle.getAttribute("cx").equals("460");
+        assert circle.getAttribute("cy").equals("20");
+
+        WebElement p = driver.findElement(By.tagName("p"));
+        assert p.getText().equals("nothing selected yet");
+
+        circle.click();
+        p = driver.findElement(By.tagName("p"));
+        String text = p.getText();
+        assert text.equals("600,150");
+    }
+
     @After
     public void close()
     {

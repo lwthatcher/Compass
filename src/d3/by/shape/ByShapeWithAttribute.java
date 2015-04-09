@@ -42,23 +42,27 @@ public class ByShapeWithAttribute extends ByShape
         for (int i = 0; i < searchFor.size(); i++)
         {
             selector += searchFor.get(i).getName();
+
+            //specify attributes
+            if (attributes.size() > 0)
+            {
+                for (String attr : attributes.keySet())
+                {
+                    selector += "[";
+                    selector += attr + "";
+                    if (attributes.get(attr) != null)
+                    {
+                        selector += "=\"" + attributes.get(attr) + "\"";
+                    }
+                    selector += "]";
+                }
+            }
+
+            //comma to separate between shapes
             if (i+1 < searchFor.size())
                 selector += ", ";
         }
-        if (attributes.size() > 0)
-        {
 
-            for (String attr : attributes.keySet())
-            {
-                selector += "[\"";
-                selector += attr + "\"";
-                if (attributes.get(attr) != null)
-                {
-                    selector += "=\"" + attr + "\"";
-                }
-                selector += "]";
-            }
-        }
         return selector;
     }
 }
