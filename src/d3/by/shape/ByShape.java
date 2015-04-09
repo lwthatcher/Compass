@@ -8,16 +8,18 @@ import org.openqa.selenium.remote.D3Element;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 
 /**
- * Created by lthatch1 on 3/23/2015.
+ * Searches for elements by their shape type. If no shape is specified, it searches for all valid shapes.
+ * Valid shapes are listed in the D3Shape enum class.
  *
  * @author Lawrence Thatcher
  */
 public class ByShape extends By
 {
-    private String prepend;
-    private List<D3Shape> searchFor;
+    protected String prepend;
+    protected List<D3Shape> searchFor;
 
     //Constructors
     public ByShape()
@@ -37,10 +39,20 @@ public class ByShape extends By
         this.prepend = prepend;
         setSearchFor(shapes);
     }
-    //Additional Parameters
+    //Additional Locator Options
     public ByShapeWithTitle withTitle(String title)
     {
         return new ByShapeWithTitle(this, title);
+    }
+
+    public ByShapeWithAttribute withAttribute(String attribute, String value)
+    {
+        return new ByShapeWithAttribute(attribute,value,this);
+    }
+
+    public ByShapeWithAttribute withAttributes(Map<String,String> attributes)
+    {
+        return new ByShapeWithAttribute(attributes,this);
     }
 
     //Finders
@@ -75,7 +87,7 @@ public class ByShape extends By
         }
     }
 
-    private String getSearchSelector()
+    protected String getSearchSelector()
     {
         String selector = "";
         for (int i = 0; i < searchFor.size(); i++)
