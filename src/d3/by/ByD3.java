@@ -16,5 +16,8 @@ public class ByD3
         return new ByPath();
     }
 
-
+    public static ByGroup group()
+    {
+        return new ByGroup();
+    }
 }
