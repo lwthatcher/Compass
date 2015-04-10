@@ -16,8 +16,6 @@ import java.util.List;
 import static d3.LesMiserablesCharacters.*;
 
 /**
- * Created by lthatch1 on 4/1/2015.
- *
  * @author Lawrence Thatcher
  */
 public class ByNeighborNodeTests
