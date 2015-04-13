@@ -16,7 +16,7 @@ import java.util.Map;
  */
 public class D3Element extends RemoteWebElement implements WebElement
 {
-    private RemoteWebElement element;
+    protected RemoteWebElement element;
 
     public D3Element(WebElement e)
     {
