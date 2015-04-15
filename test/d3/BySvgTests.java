@@ -8,6 +8,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.D3Element;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import other.SupportedDriver;
 
 import java.util.List;
@@ -112,8 +114,9 @@ public class BySvgTests
     {
         driver = SupportedDriver.Chrome.getDriver();
         driver.get(CURVED_LINKS_URL);
+        WebDriverWait wait = new WebDriverWait(driver, 10);
 
-        WebElement marius = driver.findElement(ByD3.svg().shape().withTitle("Marius"));
+        WebElement marius = wait.until(ExpectedConditions.presenceOfElementLocated(ByD3.svg().shape().withTitle("Marius")));
         assert marius != null;
         assert marius.getText().equals("Marius");
     }

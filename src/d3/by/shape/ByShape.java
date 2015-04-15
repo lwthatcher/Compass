@@ -83,7 +83,7 @@ public class ByShape extends By
             return By.cssSelector(selector);
         else
         {
-            return By.cssSelector(prepend + " > " + selector);
+            return By.cssSelector(prepend + " " + selector);
         }
     }
 
