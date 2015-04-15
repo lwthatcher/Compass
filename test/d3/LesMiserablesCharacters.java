@@ -42,4 +42,22 @@ public class LesMiserablesCharacters
         result.add(JEAN_VALJEAN);
         return result;
     }
+
+    private static List<String> BaptistineNeighbors()
+    {
+        List<String> result = new ArrayList<>();
+        result.add(MYRIEL);
+        result.add(MAGLOIRE);
+        result.add(JEAN_VALJEAN);
+        return result;
+    }
+
+    private static List<String> MagloireNeighbors()
+    {
+        List<String> result = new ArrayList<>();
+        result.add(MYRIEL);
+        result.add(BAPTISTINE);
+        result.add(JEAN_VALJEAN);
+        return result;
+    }
 }

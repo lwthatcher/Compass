@@ -2,6 +2,7 @@ package d3;
 
 import d3.by.ByD3;
 import d3.by.shape.D3Shape;
+import d3.element.ForceLayout;
 import org.junit.After;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
@@ -11,6 +12,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import other.SupportedDriver;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static d3.LesMiserablesCharacters.*;
@@ -67,6 +69,29 @@ public class ByNeighborNodeTests
         assert neighbors.size() == 1;
         assert neighbors.get(0).getText().equals(JONDRETTE_NEIGHBOR);
 
+    }
+
+    @Test
+    public void test_GetNeighborsOfGroup_doesNotDuplicateCommonNeighbors()
+    {
+        driver = SupportedDriver.Chrome.getDriver();
+        driver.get(LINE_LINKS_URL);
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+
+        D3Element baptistine = (D3Element) wait.until(ExpectedConditions.presenceOfElementLocated(ByD3.svg().shape(D3Shape.Circle).withTitle(BAPTISTINE)));
+        D3Element magloire = (D3Element) wait.until(ExpectedConditions.presenceOfElementLocated(ByD3.svg().shape(D3Shape.Circle).withTitle(MAGLOIRE)));
+
+        List<D3Element> group = new ArrayList<>();
+        group.add(baptistine);
+        group.add(magloire);
+
+        List<D3Element> neighbors = ForceLayout.getAllNeighbors(group);
+        for (D3Element neighbor : neighbors)
+        {
+            String name = neighbor.getText();
+            assert name.equals(MYRIEL) || name.equals(JEAN_VALJEAN);
+        }
+        assert neighbors.size() == 2;
     }
 
     @After
