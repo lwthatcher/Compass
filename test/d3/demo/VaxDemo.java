@@ -69,11 +69,6 @@ public class VaxDemo
         return new D3Element(largest);
     }
 
-    private D3Element getClickArea(D3Element node)
-    {
-        return null;
-    }
-
     private int getRemainingVaccines() throws Exception
     {
         return getRemainingVaccines(0);
