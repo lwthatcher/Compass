@@ -3,6 +3,7 @@ package d3.demo;
 import d3.by.ByD3;
 import d3.by.BySVG;
 import d3.element.ForceLayout;
+import d3.element.ForceNode;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -105,19 +106,18 @@ public class VaxDemo
 
     private List<D3Element> getInfectedNodes()
     {
-        List<WebElement> infected = driver.findElements(ByD3.svg().shape("circle").withAttributes(INFECTED_ATTRIBUTES));
+        List<WebElement> infected = driver.findElements(board.byShape("circle").withAttributes(INFECTED_ATTRIBUTES));
         List<D3Element> result = new ArrayList<>();
         for (WebElement node : infected)
         {
-            result.add((D3Element)node);
+            result.add(new ForceNode(node));
         }
         return result;
     }
 
     private List<D3Element> getNeighborsOfInfected(List<D3Element> infected)
     {
-        List<D3Element> neighbors = ForceLayout.getAllNeighbors(infected);
-        return neighbors;
+        return ForceLayout.getAllNeighbors(infected);
     }
 
     private boolean isInfected(D3Element node)
@@ -130,11 +130,11 @@ public class VaxDemo
 
     private D3Element getNextVaccinationTarget()
     {
-        List<WebElement> nodes = driver.findElements(ByD3.svg().shape("circle").withAttributes(NODE_ATTRIBUTES));
+        List<WebElement> nodes = board.findElements(board.byShape("circle").withAttributes(NODE_ATTRIBUTES));
         Collections.sort(nodes,new NodeSizeComparator());
 
         WebElement largest = nodes.get(0);
-        return new D3Element(largest);
+        return new ForceNode(largest);
     }
 
     private boolean gameOver()
