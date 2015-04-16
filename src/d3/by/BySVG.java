@@ -2,6 +2,7 @@ package d3.by;
 
 import d3.by.shape.ByShape;
 import d3.by.shape.D3Shape;
+import d3.element.SvgElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
@@ -46,7 +47,7 @@ public class BySVG extends By
     public WebElement findElement(SearchContext context)
     {
         WebElement e = context.findElement(By.cssSelector(SVG_SELECTOR));
-        return new D3Element(e);
+        return new SvgElement(e);
     }
 
     @Override
@@ -56,7 +57,7 @@ public class BySVG extends By
         List<WebElement> result = new ArrayList<WebElement>();
         for (WebElement element : elements)
         {
-            result.add(new D3Element(element));
+            result.add(new SvgElement(element));
         }
         return result;
     }
