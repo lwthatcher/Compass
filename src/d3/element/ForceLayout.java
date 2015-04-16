@@ -52,7 +52,7 @@ public class ForceLayout extends D3Element
             {
                 if (!nodes.contains(potentialNeighbor))
                 {
-                    totalNeighbors.add(potentialNeighbor);
+                    totalNeighbors.add(new ForceNode(potentialNeighbor));
                 }
             }
         }
