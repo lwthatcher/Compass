@@ -17,14 +17,14 @@ import java.util.Set;
  */
 public class ForceLayout extends D3Element
 {
-
     public ForceLayout(WebElement e)
     {
         super(e);
     }
 
+    //general shape locators
     //TODO: extract out into abstract class for layouts or svg elements
-    public By byShape(String... shapes)
+    public ByShape byShape(String... shapes)
     {
         D3Shape[] args = new D3Shape[shapes.length];
         int i = 0;
@@ -36,7 +36,7 @@ public class ForceLayout extends D3Element
         return new ByShape(null,args);
     }
 
-    public By byShape(D3Shape... shapes)
+    public ByShape byShape(D3Shape... shapes)
     {
         return new ByShape(null,shapes);
     }
