@@ -21,3 +21,6 @@ hs_err_pid*
 
 ## PhatomJS log
 phatomjsdriver.log
+
+##Stack Dumps
+*.stackdump
