@@ -3,6 +3,7 @@ package org.openqa.selenium.remote;
 import d3.by.ByNeighborNode;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.internal.Coordinates;
+import org.openqa.selenium.internal.WrapsElement;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.Map;
  *
  * @author Lawrence Thatcher
  */
-public class D3Element extends RemoteWebElement implements WebElement
+public class D3Element extends RemoteWebElement implements WebElement, WrapsElement
 {
     protected RemoteWebElement element;
 
@@ -35,13 +36,20 @@ public class D3Element extends RemoteWebElement implements WebElement
     public List<D3Element> getNeighborNodes()
     {
         ByNeighborNode by = new ByNeighborNode(getDriver(),element);
-        List<WebElement> neighbors = (List<WebElement>)by.findElements(null);
-        List<D3Element> result = new ArrayList<D3Element>();
+        List<WebElement> neighbors = by.findElements(null);
+        List<D3Element> result = new ArrayList<>();
         for (WebElement neighbor : neighbors)
         {
             result.add(new D3Element(neighbor));
         }
         return result;
+    }
+
+    //Implements Methods
+    @Override
+    public WebElement getWrappedElement()
+    {
+        return element;
     }
 
     //Overridden Methods
@@ -63,7 +71,7 @@ public class D3Element extends RemoteWebElement implements WebElement
     public List<WebElement> findElements(By by)
     {
         List<WebElement> elements = element.findElements(by);
-        List<WebElement> result = new ArrayList<WebElement>();
+        List<WebElement> result = new ArrayList<>();
         for (WebElement e : elements)
         {
             result.add(new D3Element(e));
