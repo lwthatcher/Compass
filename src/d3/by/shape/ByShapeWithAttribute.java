@@ -4,6 +4,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * Extension of ByShape class.
+ * In addition to looking for the specified shapes, this class allows you to search for certain attributes that the specified shape must have.
+ * These attributes can be added one at a time as an Attribute/Value pair, or inserted in as a group of attributes using a Map.
+ * If the value for a given attribute is null, then it simply looks to see if that attribute is present.
  * @author Lawrence Thatcher
  */
 public class ByShapeWithAttribute extends ByShape
