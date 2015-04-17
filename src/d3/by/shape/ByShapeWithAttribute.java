@@ -13,6 +13,7 @@ import java.util.Map;
 public class ByShapeWithAttribute extends ByShape
 {
     private Map<String,String> attributes;
+    private AttributeSelectionType selectionType = AttributeSelectionType.EXACT_TEXT;
 
     public ByShapeWithAttribute(String attr, String value, ByShape by)
     {
@@ -30,12 +31,19 @@ public class ByShapeWithAttribute extends ByShape
         this.attributes.putAll(attrs);
     }
 
+    public ByShapeWithAttribute setType(AttributeSelectionType type)
+    {
+        this.selectionType = type;
+        return this;
+    }
+
     //Helper Functions
     private void setAttributeMap(ByShape by)
     {
         if (by instanceof ByShapeWithAttribute)
         {
             attributes = ((ByShapeWithAttribute) by).attributes;
+            selectionType = ((ByShapeWithAttribute) by).selectionType;
         }
         else attributes = new HashMap<>();
     }
@@ -56,7 +64,7 @@ public class ByShapeWithAttribute extends ByShape
                     selector += attr + "";
                     if (attributes.get(attr) != null)
                     {
-                        selector += "=\"" + attributes.get(attr) + "\"";
+                        selector += selectionType.getOperator() + "\"" + attributes.get(attr) + "\"";
                     }
                     selector += "]";
                 }

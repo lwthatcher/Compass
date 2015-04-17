@@ -29,7 +29,7 @@ public class ByNeighborNode extends By
         String result =
                 "var node = arguments[0];\n" +
                 "console.log(d3.selectAll(\"line, path\").data());\n" +
-                "console.log(d3.select(node).data()[0].index);\n" +
+                //"console.log(d3.select(node).data()[0].index);\n" +
                 "var index = d3.select(node).data()[0].index;\n" +
                 "var neighbors = [];\n" +
                 "d3.selectAll(\"line, path\").data().forEach( function(d) {\n" +
@@ -52,7 +52,7 @@ public class ByNeighborNode extends By
                 "});\n" +
                 "console.log(neighbors);\n" +
                 "var bros = [];\n" +
-                "console.log(d3.selectAll(\"circle\").length);\n" +
+                //"console.log(d3.selectAll(\"circle\").length);\n" +
                 "d3.selectAll(\"circle\").forEach( function(data) {\n" +
                 "   data.forEach( function(d,i) {\n" +
                 "       for (j = 0; j < neighbors.length; j++) {\n" +
