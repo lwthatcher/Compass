@@ -2,6 +2,7 @@ package d3.demo;
 
 import d3.by.ByD3;
 import d3.by.BySVG;
+import d3.by.shape.AttributeSelectionType;
 import d3.element.ForceLayout;
 import d3.element.ForceNode;
 import org.junit.Test;
@@ -69,7 +70,7 @@ public class VaxDemo
     private void quarantinePhase() throws Exception
     {
         System.out.println("-==Entering Quarantine Phase==-");
-        Thread.sleep(7000);
+        Thread.sleep(2000);
         while (!gameOver())
         {
             //Wait for infection to spread
@@ -87,10 +88,20 @@ public class VaxDemo
             {
                D3Element quarantinee = getNextQuarantineTarget(neighbors);
                 System.out.println("clicking on: " + quarantinee.getId());
+               Thread.sleep(500);
                quarantinee.click();
+               unhighlight(neighbors);
             }
         }
         System.out.println("End Quarantine Phase");
+    }
+
+    private void unhighlight(List<D3Element> neighbors)
+    {
+        for (D3Element neighbor : neighbors)
+        {
+            ((ForceNode)neighbor).highlightOff();
+        }
     }
 
     private D3Element getNextQuarantineTarget(List<D3Element> neighbors)
@@ -106,7 +117,7 @@ public class VaxDemo
 
     private List<D3Element> getInfectedNodes()
     {
-        List<WebElement> infected = driver.findElements(board.byShape("circle").withAttributes(INFECTED_ATTRIBUTES));
+        List<WebElement> infected = driver.findElements(board.byShape("circle").withAttributes(INFECTED_ATTRIBUTES).setType(AttributeSelectionType.SUBSTRING));
         List<D3Element> result = new ArrayList<>();
         for (WebElement node : infected)
         {
@@ -117,7 +128,12 @@ public class VaxDemo
 
     private List<D3Element> getNeighborsOfInfected(List<D3Element> infected)
     {
-        return ForceLayout.getAllNeighbors(infected);
+        List<D3Element> result = ForceLayout.getAllNeighbors(infected);
+        for (D3Element neighbor : result)
+        {
+            ((ForceNode)neighbor).highlightOn();
+        }
+        return result;
     }
 
     private boolean isInfected(D3Element node)
