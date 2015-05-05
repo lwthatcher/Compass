@@ -19,8 +19,19 @@
 
     .line {
     fill: none;
-    stroke: steelblue;
     stroke-width: 1.5px;
+    }
+
+    .gyro-x {
+    stroke: steelblue;
+    }
+
+    .gyro-y {
+    stroke: crimson;
+    }
+
+    .gyro-z {
+    stroke: lawngreen;
     }
 
 </style>
@@ -34,7 +45,7 @@ var margin = {top: 20, right: 20, bottom: 30, left: 50},
 
 var parseDate = d3.time.format("%d-%b-%y").parse;
 
-var x = d3.time.scale()
+var x = d3.scale.linear()
     .range([0, width]);
 
 var y = d3.scale.linear()
@@ -48,10 +59,6 @@ var yAxis = d3.svg.axis()
     .scale(y)
     .orient("left");
 
-var line = d3.svg.line()
-    .x(function(d) { return x(d.time); })
-    .y(function(d) { return y(d.x); });
-
 var svg = d3.select("body").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
@@ -59,13 +66,25 @@ var svg = d3.select("body").append("svg")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 d3.tsv("../tsv/gyroscope.tsv", function(error, data) {
-  console.log(data);
   data.forEach(function(d) {
     d.time = +d.time;
     d.x = +d.x;
     d.y = +d.y;
     d.z = +d.z;
   });
+
+    var lineGen = function(dim) {
+        var xScale = d3.scale.linear()
+            .range([0, width])
+            .domain(d3.extent(data, function(d) { return d.time; }));
+        var yScale = d3.scale.linear()
+            .range([height, 0])
+            .domain(d3.extent(data, function(d) { return d[dim]; }));
+        var line = d3.svg.line()
+        .x(function(d) { return xScale(d.time); })
+        .y(function(d) { return yScale(d[dim]); });
+        return line;
+  }
 
   x.domain(d3.extent(data, function(d) { return d.time; }));
   y.domain(d3.extent(data, function(d) { return d.x; }));
@@ -83,12 +102,21 @@ d3.tsv("../tsv/gyroscope.tsv", function(error, data) {
       .attr("y", 6)
       .attr("dy", ".71em")
       .style("text-anchor", "end")
-      .text("Price ($)");
 
   svg.append("path")
       .datum(data)
-      .attr("class", "line")
-      .attr("d", line);
+      .attr("class", "line gyro-x")
+      .attr("d", lineGen('x'));
+
+svg.append("path")
+      .datum(data)
+      .attr("class", "line gyro-y")
+      .attr("d", lineGen('y'));
+
+svg.append("path")
+      .datum(data)
+      .attr("class", "line gyro-z")
+      .attr("d", lineGen('z'));
 });
 
 </script>
